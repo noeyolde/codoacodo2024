@@ -1,0 +1,49 @@
+const boton_menu = document.querySelector(".button_menu");
+const header = document.querySelector(".header");
+const container_navegation = document.querySelector(".container_navegation");
+const body = document.body;
+
+
+let posActual = 0;
+let status_button = true;
+
+// eventos
+
+boton_menu.addEventListener("click",function() {
+	container_navegation.classList.toggle("active_button_menu");
+	
+
+	if (status_button){
+		body.setAttribute("style","overflow: hidden;");
+		header.setAttribute("style","backdrop-filter: none;");
+		status_button = false;
+	}else {
+		body.setAttribute("style","overflow: visible;");
+		header.setAttribute("style","backdrop-filter:blur(10px)");
+		//body.removeAttribute("style","overflow: hidden;");
+		status_button = true;
+	}	
+
+});
+
+// Para que desaparezca y aparezca el header cuando hacemos scroll
+
+window.addEventListener("scroll",function(){
+	if (this.window.scrollY > posActual) {
+		// bajando scroll
+		header.classList.remove("active_header");
+		header.classList.add("desactive_header");
+	}else{
+			// subiendo scroll
+			header.classList.remove("desactive_header");
+			header.classList.add("active_header");
+	}
+	if (this.window.scrollY === 0) {
+    header.setAttribute("style", "backdrop-filter:none");
+    header.classList.add("ocultar_box_shadow");
+  } else {
+    header.removeAttribute("style", "backdrop-filter:blur(10px)");
+    header.classList.remove("ocultar_box_shadow");
+  }
+	posActual = this.window.scrollY;
+});
