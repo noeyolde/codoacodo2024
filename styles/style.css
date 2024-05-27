@@ -16,7 +16,7 @@
 }
 html{
 	font-size: 16px;
-	font-family: 'Chakra Petch', sans-serif;
+	font-family: 'Chakra Petch', sans-serif; 
 }
 
 body{
@@ -211,6 +211,11 @@ body::-webkit-scrollbar-thumb {
 	object-position: center center;
 	border-radius: var(--border-radius-1);
 }
+.text_section{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+}
 .text_section p{
 	margin-bottom: 10px;
 }
@@ -235,22 +240,29 @@ body::-webkit-scrollbar-thumb {
 }
 #experiencia .container_description_section{
 	grid-template-columns: 1fr;
+	margin-top: 30px;
 }
-#experiencia .text_section ul{
+#experiencia .cards ul{
 	grid-template-columns: 1fr;
-
-}
-#experiencia .text_section ul li p{
+	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
-
-#experiencia .text_section ul li p::before{
-	content:"▹";
-	color: var(--color-1);
-	margin-left: 30px;
-	padding: 0px 10px;
-	font-size: 1.5rem;
-
+#experiencia .cards ul .card{
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	width: 250px;
+	border: #eb233c 2px solid;
+	border-radius: 3%;
+	overflow: hidden;
+	text-align: center;
+	gap: 20px;
+}
+#experiencia .cards ul .card img{
+    height: 60%;
+	object-fit: cover;
 }
 
 /* section trabajo*/
@@ -555,6 +567,9 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* seccion Galería */
+
+
 /* seccion footer*/
 .footer{
 	width: 100%;
@@ -682,23 +697,4 @@ button:hover {
 }
 .ocultar_box_shadow{
     box-shadow: none;
-}
-/* Seccion Tabla */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    background-color: #f2f2f2;
-    text-align: left;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
 }
