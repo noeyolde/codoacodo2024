@@ -1,4 +1,4 @@
-let uri="../db.json"
+let uri="./db.json"
 fetch(uri)
     .then( response => response.json())
     .then( data => showData(data))
