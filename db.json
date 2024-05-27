@@ -1,0 +1,19 @@
+{
+    "actividades_destacadas" : [
+        {
+            "id":1,
+            "title": "Escuela Participante de Proyectos de Feria de Ciencias",
+            "fs_path":"./imagenes/lenguajes-programacion.jpg"
+        },
+        {
+            "id":2,
+            "title": "Participante en “Programa Jóvenes con Más y Mejor Trabajo”",
+            "fs_path":"./imagenes/galeria_imagenes/391715831_642084721446389_2051710755246450208_n.jpg"
+        },
+        {
+            "id":3,
+            "title": "Habilidades: Pensamiento creativo y resolución de problemas.",
+            "fs_path":"./imagenes/galeria_imagenes/colegio-tercer-milenio-423136-184357.jpg"
+        }
+    ]
+}
