@@ -26,7 +26,7 @@ boton_menu.addEventListener("click",function() {
 
 });
 
-// Para que desaparezca y aparezca el nav cuando hacemos scroll
+// Para que desaparezca y aparezca el header cuando hacemos scroll
 
 window.addEventListener("scroll",function(){
 	if (this.window.scrollY > posActual) {
